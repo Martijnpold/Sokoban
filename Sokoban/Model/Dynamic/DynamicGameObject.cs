@@ -8,5 +8,12 @@ namespace Sokoban.Model
 {
     abstract class DynamicGameObject
     {
+        public StaticGameObject ObjectBelow { get; set; }
+
+        public void LinkObjectBelow(StaticGameObject gameObject)
+        {
+            gameObject.ObjectOnTop = this;
+            ObjectBelow = gameObject;
+        }
     }
 }
