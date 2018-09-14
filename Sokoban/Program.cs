@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Proces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace Sokoban
     {
         static void Main(string[] args)
         {
+            new Parser().ParseMaze("test");
+            Console.ReadLine();
         }
     }
 }
