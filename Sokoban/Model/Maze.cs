@@ -8,5 +8,12 @@ namespace Sokoban.Model
 {
     class Maze
     {
+        public StaticGameObject MazeCorner { get; set; }
+        public Player Player { get; set; }
+
+        public bool isSolved()
+        {
+            return false;
+        }
     }
 }

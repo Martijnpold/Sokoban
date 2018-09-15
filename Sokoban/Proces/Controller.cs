@@ -10,5 +10,25 @@ namespace Sokoban.Proces
     class Controller
     {
         public Maze Maze { get; set; }
+
+        public void StartGame()
+        {
+
+        }
+
+        public void QuitGame()
+        {
+
+        }
+
+        public void SelectLevel()
+        {
+
+        }
+
+        public void doMove()
+        {
+
+        }
     }
 }

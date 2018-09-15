@@ -10,5 +10,20 @@ namespace Sokoban.Presentation
     class InputView
     {
         private Controller _controller;
+
+        public void SelectLevel()
+        {
+
+        }
+
+        public void WinScreen()
+        {
+
+        }
+
+        public void MazeScreen()
+        {
+
+        }
     }
 }

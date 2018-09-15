@@ -31,5 +31,7 @@ namespace Sokoban.Model
             gameObject.ObjectBelow = this;
             ObjectOnTop = gameObject;
         }
+
+        public abstract bool canLinkObjectOnTop();
     }
 }

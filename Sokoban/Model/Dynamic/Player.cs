@@ -8,5 +8,16 @@ namespace Sokoban.Model
 {
     class Player : DynamicGameObject
     {
+        public override bool IsSolved { get { return true; } set { this.IsSolved = value; } }
+
+        public override char GetIcon()
+        {
+            return '@';
+        }
+
+        public override void move(Direction direction)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
