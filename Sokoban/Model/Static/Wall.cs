@@ -8,5 +8,14 @@ namespace Sokoban.Model
 {
     class Wall : StaticGameObject
     {
+        public override bool canLinkObjectOnTop()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override char GetIcon()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

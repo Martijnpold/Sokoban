@@ -33,5 +33,7 @@ namespace Sokoban.Model
         }
 
         public abstract bool canLinkObjectOnTop();
+
+        public abstract char GetIcon();
     }
 }
