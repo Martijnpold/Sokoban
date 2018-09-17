@@ -63,6 +63,11 @@
   </Class>
   <Class Name="Sokoban.Model.Maze" Collapsed="true">
     <Position X="4" Y="3.5" Width="1.5" />
+    <AssociationLine Name="Player" Type="Sokoban.Model.Dynamic.Player">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.693" Y="0.072" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAARAAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
@@ -113,6 +118,9 @@
       <HashCode>CBAAAAAAAAAAgAIAAAAAgBAAAAAAAgAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\StaticGameObject.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ObjectOnTop" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Model.Static.Wall" Collapsed="true">
     <Position X="5" Y="6.25" Width="1.5" />
