@@ -17,7 +17,7 @@
       <Property Name="Maze" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Sokoban.Proces.Parser">
+  <Class Name="Sokoban.Proces.Parser" Collapsed="true">
     <Position X="2.75" Y="2" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
@@ -54,7 +54,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEAAAAA=</HashCode>
       <FileName>Presentation\OutputView.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -62,59 +62,63 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Model.Maze" Collapsed="true">
-    <Position X="4" Y="3.75" Width="1.5" />
+    <Position X="4" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAARAAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MazeCorner" />
+      <Property Name="Player" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Model.Dynamic.Box" Collapsed="true">
+    <Position X="6.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Dynamic\Box.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Dynamic.DynamicGameObject" Collapsed="true">
+    <Position X="7.5" Y="5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAQAAIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Dynamic\DynamicGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Dynamic.Player" Collapsed="true">
+    <Position X="8.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Dynamic\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Model.Static.Destination" Collapsed="true">
-    <Position X="0.5" Y="5.75" Width="1.5" />
+    <Position X="0.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAABAAAAAAAgAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Model.Static.Floor" Collapsed="true">
-    <Position X="2.25" Y="5.75" Width="1.5" />
+    <Position X="2.75" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Static\Floor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Model.StaticGameObject" Collapsed="true">
-    <Position X="2.25" Y="4.75" Width="1.5" />
+  <Class Name="Sokoban.Model.Static.StaticGameObject" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAABABAAAAAIAAAAAAEAAAAAAAAAAQAAEAAAAAAA=</HashCode>
+      <HashCode>CBAAAAAAAAAAgAIAAAAAgBAAAAAAAgAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\StaticGameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Model.Wall" Collapsed="true">
-    <Position X="4" Y="5.75" Width="1.5" />
+  <Class Name="Sokoban.Model.Static.Wall" Collapsed="true">
+    <Position X="5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Static\Wall.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Sokoban.Model.Dynamic.Box" Collapsed="true">
-    <Position X="7.75" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>Model\Dynamic\Box.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Sokoban.Model.DynamicGameObject" Collapsed="true">
-    <Position X="6.75" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAGAAAAAAIAAAAAAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>Model\Dynamic\DynamicGameObject.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Sokoban.Model.Player" Collapsed="true">
-    <Position X="5.75" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
-      <FileName>Model\Dynamic\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
