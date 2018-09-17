@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Model.Static;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,16 +9,20 @@ namespace Sokoban.Model.Dynamic
 {
     class Box : DynamicGameObject
     {
-        public override bool IsSolved { get { return IsSolved; } set { this.IsSolved = value; } }
-
         public override char GetIcon()
         {
-            return (IsSolved) ? 'O' : 'Ø';
+            return (IsOnDestination) ? 'Ø' : 'O';
         }
 
-        public override void move(Direction direction)
+        public override void Move(Direction direction)
         {
-            throw new NotImplementedException();
+            StaticGameObject to = ObjectBelow.Neighbours[direction];
+            if (to.IsFree)
+            {
+                ObjectBelow.MoveOff();
+                to.MoveOnTop(this);
+            }
+
         }
     }
 }

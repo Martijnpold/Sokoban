@@ -4,18 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sokoban.Model
+namespace Sokoban.Model.Static
 {
     class Wall : StaticGameObject
     {
-        public override bool canLinkObjectOnTop()
+        public override bool CanMoveOnTop()
         {
-            throw new NotImplementedException();
+            return false;
         }
 
-        public override char GetIcon()
+        public override char GetEmptyIcon()
         {
-            throw new NotImplementedException();
+            return '#';
         }
     }
 }

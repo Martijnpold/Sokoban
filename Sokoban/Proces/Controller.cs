@@ -13,7 +13,12 @@ namespace Sokoban.Proces
 
         public void StartGame()
         {
-
+            Maze.Player.Move(Direction.Up);
+            Maze.Player.Move(Direction.Right);
+            Maze.Player.Move(Direction.Right);
+            Maze.Player.Move(Direction.Down);
+            Maze.Player.Move(Direction.Right);
+            Maze.Player.Move(Direction.Up);
         }
 
         public void QuitGame()

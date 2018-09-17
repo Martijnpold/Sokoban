@@ -3,19 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Sokoban.Model.Dynamic;
 
 namespace Sokoban.Model.Static
 {
     class Floor : StaticGameObject
     {
-        public override bool canLinkObjectOnTop()
+        public override bool CanMoveOnTop()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
-        public override char GetIcon()
+        public override char GetEmptyIcon()
         {
-            throw new NotImplementedException();
+            return '.';
         }
     }
 }

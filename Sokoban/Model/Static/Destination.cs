@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sokoban.Model.Dynamic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,14 +9,26 @@ namespace Sokoban.Model.Static
 {
     class Destination : StaticGameObject
     {
-        public override bool canLinkObjectOnTop()
+        public override bool CanMoveOnTop()
         {
-            throw new NotImplementedException();
+            return true;
         }
 
-        public override char GetIcon()
+        public override char GetEmptyIcon()
         {
-            throw new NotImplementedException();
+            return 'x';
+        }
+
+        public override void MoveOnTop(DynamicGameObject gameObject)
+        {
+            gameObject.IsOnDestination = true;
+            base.MoveOnTop(gameObject);
+        }
+
+        public override void MoveOff()
+        {
+            ObjectOnTop.IsOnDestination = false;
+            base.MoveOff();
         }
     }
 }

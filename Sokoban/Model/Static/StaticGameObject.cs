@@ -1,39 +1,43 @@
-﻿using System;
+﻿using Sokoban.Model.Dynamic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sokoban.Model
+namespace Sokoban.Model.Static
 {
     abstract class StaticGameObject
     {
-        private Dictionary<Direction, StaticGameObject> _dictionary;
-        public DynamicGameObject ObjectOnTop { get; set; }
+        public Dictionary<Direction, StaticGameObject> Neighbours { get; }
+        public DynamicGameObject ObjectOnTop { get; private set; }
+        public bool IsFree { get { return (ObjectOnTop == null && CanMoveOnTop()); } }
 
         public StaticGameObject()
         {
-            _dictionary = new Dictionary<Direction, StaticGameObject>();
+            Neighbours = new Dictionary<Direction, StaticGameObject>();
         }
 
-        public StaticGameObject GetObjectAt(Direction direction)
+        public virtual void MoveOff()
         {
-            return _dictionary[direction];
+            if (!IsFree) ObjectOnTop.ObjectBelow = null;
+            ObjectOnTop = null;
         }
 
-        public void SetObjectAt(Direction direction, StaticGameObject gameObject)
+        public virtual void MoveOnTop(DynamicGameObject gameObject)
         {
-            _dictionary[direction] = gameObject;
-        }
-
-        public void LinkObjectOnTop(DynamicGameObject gameObject)
-        {
-            gameObject.ObjectBelow = this;
             ObjectOnTop = gameObject;
+            gameObject.ObjectBelow = this;
         }
 
-        public abstract bool canLinkObjectOnTop();
+        public abstract bool CanMoveOnTop();
 
-        public abstract char GetIcon();
+        public char GetIcon()
+        {
+            if (!CanMoveOnTop()) return GetEmptyIcon();
+            return (IsFree) ? GetEmptyIcon() : ObjectOnTop.GetIcon();
+        }
+
+        public abstract char GetEmptyIcon();
     }
 }

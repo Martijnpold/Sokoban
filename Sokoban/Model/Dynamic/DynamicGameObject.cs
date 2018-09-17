@@ -1,23 +1,18 @@
-﻿using System;
+﻿using Sokoban.Model.Static;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sokoban.Model
+namespace Sokoban.Model.Dynamic
 {
     abstract class DynamicGameObject
     {
         public StaticGameObject ObjectBelow { get; set; }
-        public abstract bool IsSolved { get; set; }
+        public bool IsOnDestination { get; set; }
 
-        public void LinkObjectBelow(StaticGameObject gameObject)
-        {
-            gameObject.ObjectOnTop = this;
-            ObjectBelow = gameObject;
-        }
-
-        public abstract void move(Direction direction);
+        public abstract void Move(Direction direction);
 
         public abstract char GetIcon();
     }

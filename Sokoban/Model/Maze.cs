@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sokoban.Model.Dynamic;
+using Sokoban.Model.Static;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +13,7 @@ namespace Sokoban.Model
         public StaticGameObject MazeCorner { get; set; }
         public Player Player { get; set; }
 
-        public bool isSolved()
+        public bool IsSolved()
         {
             return false;
         }

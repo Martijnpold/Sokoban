@@ -11,7 +11,7 @@ namespace Sokoban
     {
         static void Main(string[] args)
         {
-            new Parser().ParseMaze("test");
+            new Parser().ParseMaze(1);
             Console.ReadLine();
         }
     }
