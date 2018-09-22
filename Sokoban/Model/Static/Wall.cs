@@ -15,7 +15,7 @@ namespace Sokoban.Model.Static
 
         public override char GetEmptyIcon()
         {
-            return '#';
+            return '█';
         }
     }
 }
