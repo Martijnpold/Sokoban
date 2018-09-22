@@ -12,6 +12,12 @@ namespace Sokoban.Model
     {
         public StaticGameObject MazeCorner { get; set; }
         public Player Player { get; set; }
+        public int Id { get; set; }
+
+        public Maze(int id)
+        {
+            Id = id;
+        }
 
         public bool IsSolved()
         {
