@@ -9,21 +9,9 @@ namespace Sokoban.Presentation
 {
     class InputView
     {
-        private Controller _controller;
-
-        public void SelectLevel()
+        private char getKeyPress()
         {
-
-        }
-
-        public void WinScreen()
-        {
-
-        }
-
-        public void MazeScreen()
-        {
-
+            return Console.ReadKey().KeyChar;
         }
     }
 }
