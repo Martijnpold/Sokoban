@@ -19,7 +19,7 @@ namespace Sokoban.Proces
             {
                 return _maze;
             }
-            private set
+            set
             {
                 _maze = value;
             }
