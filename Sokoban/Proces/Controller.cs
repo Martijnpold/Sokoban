@@ -26,20 +26,15 @@ namespace Sokoban.Proces
         /// </summary>
         public void SelectLevel()
         {
-            //Show main menu
+            _outputView.PrintMainMenuView();
             while (true)
             {
-                char input = _inputView.getKeyPress();
-                if (input >= '1' && input <= '4')
-                {
-                    int selection = input - '1' + 1;
-                    PlayLevel(selection);
-                    break;
-                }
-                if (input == 's')
-                {
-                    QuitGame();
-                }
+                ConsoleKey input = _inputView.getKeyPress();
+                if (input == ConsoleKey.D1) PlayLevel(1);
+                if (input == ConsoleKey.D2) PlayLevel(2);
+                if (input == ConsoleKey.D3) PlayLevel(3);
+                if (input == ConsoleKey.D4) PlayLevel(4);
+                if (input == ConsoleKey.S) QuitGame();
             }
         }
 
@@ -64,13 +59,14 @@ namespace Sokoban.Proces
 
             while (true)
             {
-                char input = _inputView.getKeyPress();
-                if (input == 37) DoMove(Direction.Left);
-                if (input == 38) DoMove(Direction.Up);
-                if (input == 39) DoMove(Direction.Right);
-                if (input == 40) DoMove(Direction.Down);
-                if (input == 'r') { PlayLevel(Maze.Id); break; }
-                if (input == 's') { SelectLevel(); break; }
+                _outputView.PrintLevelView(Maze);
+                ConsoleKey input = _inputView.getKeyPress();
+                if (input == ConsoleKey.LeftArrow) DoMove(Direction.Left);
+                if (input == ConsoleKey.UpArrow) DoMove(Direction.Up);
+                if (input == ConsoleKey.RightArrow) DoMove(Direction.Right);
+                if (input == ConsoleKey.DownArrow) DoMove(Direction.Down);
+                if (input == ConsoleKey.R) PlayLevel(Maze.Id);
+                if (input == ConsoleKey.S) SelectLevel();
                 if (IsFinished()) FinishLevel();
             }
         }
@@ -98,7 +94,7 @@ namespace Sokoban.Proces
         /// </summary>
         public void FinishLevel()
         {
-            //Show win screen
+            _outputView.PrintWinView(Maze);
             _inputView.getKeyPress();
             SelectLevel();
         }

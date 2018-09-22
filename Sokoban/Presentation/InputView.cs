@@ -9,9 +9,9 @@ namespace Sokoban.Presentation
 {
     class InputView
     {
-        public char getKeyPress()
+        public ConsoleKey getKeyPress()
         {
-            return Console.ReadKey().KeyChar;
+            return Console.ReadKey().Key;
         }
     }
 }

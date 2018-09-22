@@ -10,7 +10,7 @@
   <Class Name="Sokoban.Proces.Controller" Collapsed="true">
     <Position X="5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAABAABIAgAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>AIAAAAAAAABAAAAEABAABIAEAAAAAAAABAAAACIAAAA=</HashCode>
       <FileName>Proces\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -24,27 +24,16 @@
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAIABAA=</HashCode>
       <FileName>Proces\Parser.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Maze" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Presentation.OutputView" Collapsed="true">
     <Position X="6" Y="0.5" Width="1.5" />
-    <AssociationLine Name="_controller" Type="Sokoban.Proces.Controller">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.957" Y="0.093" />
-      </MemberNameLabel>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAAAAACAAAAAAAAgAAAAAAAAAACAA=</HashCode>
       <FileName>Presentation\OutputView.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="_controller" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="Sokoban.Model.Maze" Collapsed="true">
     <Position X="4" Y="3.5" Width="1.5" />
@@ -54,7 +43,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAARAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAARAAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

@@ -35,39 +35,47 @@ namespace Sokoban.Presentation
 
         public void PrintMainMenuView()
         {
-            Console.Write("╔══════════════════════════════════════════════════════╗");
-            Console.Write("║    Welkom Bij Sokoban!                               ║");
-            Console.Write("║                                                      ║");
-            Console.Write("║    betekenis van de symbolen   ║  doel van het spel  ║");
-            Console.Write("║                                ║                     ║");
-            Console.Write("║    spatie : outerspace         ║                     ║");
-            Console.Write("║         █ : muur               ║  duw met de truck   ║");
-            Console.Write("║         · : vloer              ║  de krat(ten)       ║");
-            Console.Write("║         O : krat               ║  naar de bestemming ║");
-            Console.Write("║         Ø : krat op bestemming ║                     ║");
-            Console.Write("║         x : bestemming         ║                     ║");
-            Console.Write("║         @ : speler             ║                     ║");
-            Console.Write("╚══════════════════════════════════════════════════════╝");
-            Console.Write("");
-            Console.Write("> Kies een doolhof (1 - 4) s = stop");
+            System.Console.Clear();
+            Console.WriteLine("╔══════════════════════════════════════════════════════╗");
+            Console.WriteLine("║    Welkom Bij Sokoban!                               ║");
+            Console.WriteLine("║                                                      ║");
+            Console.WriteLine("║    betekenis van de symbolen   ║  doel van het spel  ║");
+            Console.WriteLine("║                                ║                     ║");
+            Console.WriteLine("║    spatie : outerspace         ║                     ║");
+            Console.WriteLine("║         █ : muur               ║  duw met de truck   ║");
+            Console.WriteLine("║         · : vloer              ║  de krat(ten)       ║");
+            Console.WriteLine("║         O : krat               ║  naar de bestemming ║");
+            Console.WriteLine("║         Ø : krat op bestemming ║                     ║");
+            Console.WriteLine("║         x : bestemming         ║                     ║");
+            Console.WriteLine("║         @ : speler             ║                     ║");
+            Console.WriteLine("╚══════════════════════════════════════════════════════╝");
+            Console.WriteLine("");
+            Console.WriteLine("> Kies een doolhof (1 - 4) s = stop");
         }
 
-        public void PrintLevelView()
+        public void PrintLevelView(Maze maze)
         {
-            Console.Write("╔═════════════════╗");
-            Console.Write("║     Sokoban     ║");
-            Console.Write("╚═════════════════╝");
-            Console.Write("════════════════════════════════════════════════════════");
-            PrintMaze();
-            Console.Write("════════════════════════════════════════════════════════");
+            System.Console.Clear();
+            Console.WriteLine("╔═════════════════╗");
+            Console.WriteLine("║     Sokoban     ║");
+            Console.WriteLine("╚═════════════════╝");
+            Console.WriteLine("════════════════════════════════════════════════════════");
+            PrintMaze(maze);
+            Console.WriteLine("════════════════════════════════════════════════════════");
             
-            Console.Write("> gebruik de pijltjestoetsen <s = stop, r = reset>");
+            Console.WriteLine("> gebruik de pijltjestoetsen <s = stop, r = reset>");
         }
 
-        public void PrintWinView()
+        public void PrintWinView(Maze maze)
         {
-            Console.Write("═══════════════👌👌 Gefeliciflapstaart 👌👌══════════════");
-            Console.Write("> press any key to continue");
+            System.Console.Clear();
+            Console.WriteLine("╔═════════════════╗");
+            Console.WriteLine("║     Sokoban     ║");
+            Console.WriteLine("╚═════════════════╝");
+            Console.WriteLine("════════════════════════════════════════════════════════");
+            PrintMaze(maze);
+            Console.WriteLine("═══════════════👌👌 Gefeliciflapstaart 👌👌══════════════");
+            Console.WriteLine("> press any key to continue");
         }
     }
 }

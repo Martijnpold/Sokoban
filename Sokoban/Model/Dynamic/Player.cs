@@ -11,12 +11,13 @@ namespace Sokoban.Model.Dynamic
     {
         public override char GetIcon()
         {
-            return '😐';
+            return '@';
         }
 
         public override void Move(Direction direction)
         {
             StaticGameObject to = ObjectBelow.Neighbours[direction];
+            if (!to.CanMoveOnTop()) return;
             if (!to.IsFree) to.ObjectOnTop.Move(direction);
             if (to.IsFree)
             {
