@@ -11,11 +11,18 @@ namespace Sokoban.Presentation
 {
     class OutputView
     {
-        public void PrintMaze(Maze maze)
+        private Controller _controller;
+
+        public OutputView(Controller controller)
+        {
+            _controller = controller;
+        }
+
+        public void PrintMaze()
         {
             StaticGameObject x, y;
             bool xDone, yDone;
-            y = maze.MazeCorner;
+            y = _controller.Maze.MazeCorner;
             yDone = false;
             while (!yDone)
             {

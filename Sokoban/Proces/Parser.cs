@@ -12,22 +12,11 @@ namespace Sokoban.Proces
 {
     class Parser
     {
-        private Maze _maze;
-        public Maze Maze
-        {
-            get
-            {
-                return _maze;
-            }
-            private set
-            {
-                _maze = value;
-            }
-        }
+        public Maze Maze { get; set; }
 
         public void ParseMaze(int id)
         {
-            _maze = new Maze(id);
+            Maze = new Maze();
 
             string[] lines = System.IO.File.ReadAllLines("Doolhof/doolhof" + id + ".txt");
 
@@ -74,8 +63,8 @@ namespace Sokoban.Proces
                         //Player
                         case '@':
                         mazeLayout[charNr, lineNr] = new Floor();
-                        _maze.Player = new Player();
-                        mazeLayout[charNr, lineNr].MoveOnTop(_maze.Player);
+                        Maze.Player = new Player();
+                        mazeLayout[charNr, lineNr].MoveOnTop(Maze.Player);
                         break;
 
                         default:
@@ -119,7 +108,12 @@ namespace Sokoban.Proces
                 }
             }
 
-            _maze.MazeCorner = mazeLayout[0, 0];
+            Maze.MazeCorner = mazeLayout[0, 0];
+
+            Controller controller = new Controller() { Maze = this.Maze };
+            OutputView output = new OutputView(controller);
+            controller.StartGame();
+            output.PrintMaze();
         }
     }
 }
