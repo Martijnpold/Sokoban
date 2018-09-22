@@ -12,6 +12,8 @@ namespace Sokoban.Model.Dynamic
         public StaticGameObject ObjectBelow { get; set; }
         public bool IsOnDestination { get; set; }
 
+        public virtual bool IsSolved() { return true; }
+
         public abstract void Move(Direction direction);
 
         public abstract char GetIcon();

@@ -74,7 +74,7 @@ namespace Sokoban.Presentation
             Console.WriteLine("╚═════════════════╝");
             Console.WriteLine("════════════════════════════════════════════════════════");
             PrintMaze(maze);
-            Console.WriteLine("═══════════════👌👌 Gefeliciflapstaart 👌👌══════════════");
+            Console.WriteLine("═══════════════════ Gefeliciflapstaart ═════════════════");
             Console.WriteLine("> press any key to continue");
         }
     }

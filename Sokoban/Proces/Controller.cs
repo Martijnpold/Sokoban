@@ -1,4 +1,5 @@
 ﻿using Sokoban.Model;
+using Sokoban.Model.Static;
 using Sokoban.Presentation;
 using System;
 using System.Collections.Generic;
@@ -71,16 +72,44 @@ namespace Sokoban.Proces
             }
         }
 
+        /// <summary>
+        /// Move the player in a direction.
+        /// </summary>
+        /// <param name="direction">Direction to move in</param>
         public void DoMove(Direction direction)
         {
             Maze.Player.Move(direction);
         }
 
+        /// <summary>
+        /// Check if the level is solved.
+        /// </summary>
+        /// <returns>Boolean whether or not the level is finished</returns>
         public bool IsFinished()
         {
-            return Maze.IsSolved();
+            StaticGameObject x, y;
+            bool xDone, yDone;
+            y = Maze.MazeCorner;
+            yDone = false;
+            while (!yDone)
+            {
+                x = y;
+                xDone = false;
+                while (!xDone)
+                {
+                    if (x.ObjectOnTop != null && !x.ObjectOnTop.IsSolved()) return false;
+                    xDone = !x.Neighbours.ContainsKey(Direction.Right);
+                    if (!xDone) x = x.Neighbours[Direction.Right];
+                }
+                yDone = !y.Neighbours.ContainsKey(Direction.Down);
+                if (!yDone) y = y.Neighbours[Direction.Down];
+            }
+            return true;
         }
 
+        /// <summary>
+        /// Finish level and show win screen.
+        /// </summary>
         public void FinishLevel()
         {
             _outputView.PrintWinView(Maze);
@@ -88,16 +117,12 @@ namespace Sokoban.Proces
             SelectLevel();
         }
 
+        /// <summary>
+        /// Exit process.
+        /// </summary>
         public void QuitGame()
         {
             Environment.Exit(0);
-        }
-
-        public void doMove()
-        {
-            _outputView.PrintWinView(Maze);
-            _inputView.getKeyPress();
-            SelectLevel();
         }
     }
 }

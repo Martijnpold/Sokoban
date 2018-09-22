@@ -18,10 +18,5 @@ namespace Sokoban.Model
         {
             Id = id;
         }
-
-        public bool IsSolved()
-        {
-            return false;
-        }
     }
 }

@@ -11,7 +11,7 @@ namespace Sokoban.Model.Dynamic
     {
         public override char GetIcon()
         {
-            return (IsOnDestination) ? '⬜' : '☑';
+            return (IsOnDestination) ? 'Ø' : 'O';
         }
 
         public override void Move(Direction direction)
@@ -22,7 +22,11 @@ namespace Sokoban.Model.Dynamic
                 ObjectBelow.MoveOff();
                 to.MoveOnTop(this);
             }
+        }
 
+        public override bool IsSolved()
+        {
+            return IsOnDestination;
         }
     }
 }
