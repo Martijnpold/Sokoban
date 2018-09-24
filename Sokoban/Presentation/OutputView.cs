@@ -36,9 +36,9 @@ namespace Sokoban.Presentation
         public void PrintMainMenuView()
         {
             System.Console.Clear();
-            Console.WriteLine("╔══════════════════════════════════════════════════════╗");
-            Console.WriteLine("║    Welkom Bij Sokoban!                               ║");
-            Console.WriteLine("║                                                      ║");
+            Console.WriteLine("╔════════════════════════════════╦═════════════════════╗");
+            Console.WriteLine("║    Welkom Bij Sokoban!         ║                     ║");
+            Console.WriteLine("║                                ║                     ║");
             Console.WriteLine("║    betekenis van de symbolen   ║  doel van het spel  ║");
             Console.WriteLine("║                                ║                     ║");
             Console.WriteLine("║    spatie : outerspace         ║                     ║");
@@ -48,7 +48,7 @@ namespace Sokoban.Presentation
             Console.WriteLine("║         Ø : krat op bestemming ║                     ║");
             Console.WriteLine("║         x : bestemming         ║                     ║");
             Console.WriteLine("║         @ : speler             ║                     ║");
-            Console.WriteLine("╚══════════════════════════════════════════════════════╝");
+            Console.WriteLine("╚════════════════════════════════╩═════════════════════╝");
             Console.WriteLine("");
             Console.WriteLine("> Kies een doolhof (1 - 4) s = stop");
         }
