@@ -112,5 +112,28 @@
       <FileName>Presentation\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="Sokoban.Model.Dynamic.Opposer">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAACAAASAA=</HashCode>
+      <FileName>Model\Dynamic\Opposer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sokoban.Model.Static.DamagedFloor">
+    <Position X="4.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAIAAEAAAAAAAAAABAgAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Model\Static\DamagedFloor.cs</FileName>
+      <NewMemberFileName>Model\Static\VoidFloor.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Static.VoidFloor">
+    <Position X="2.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Model\Static\VoidFloor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
