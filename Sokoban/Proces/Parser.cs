@@ -68,14 +68,17 @@ namespace Sokoban.Proces
                         //Box
                         case 'o':
                         mazeLayout[charNr, lineNr] = new Floor();
-                        mazeLayout[charNr, lineNr].MoveOnTop(new Box());
+                        Box box = new Box();
+                        box.ObjectBelow = mazeLayout[charNr, lineNr];
+                        mazeLayout[charNr, lineNr].ObjectOnTop = box;
                         break;
 
                         //Player
                         case '@':
                         mazeLayout[charNr, lineNr] = new Floor();
                         _maze.Player = new Player();
-                        mazeLayout[charNr, lineNr].MoveOnTop(_maze.Player);
+                        _maze.Player.ObjectBelow = mazeLayout[charNr, lineNr];
+                        mazeLayout[charNr, lineNr].ObjectOnTop = _maze.Player;
                         break;
 
                         default:
@@ -116,6 +119,7 @@ namespace Sokoban.Proces
                             if (y1 >= 0 && y1 < mazeLayout.GetLength(1))
                                 tile.Neighbours[dir] = mazeLayout[x1, y1];
                     }
+                    tile.AddToMaze(_maze);
                 }
             }
 

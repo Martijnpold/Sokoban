@@ -8,15 +8,27 @@ using System.Threading.Tasks;
 
 namespace Sokoban.Model
 {
-    class Maze
+    class Maze : IMaze
     {
         public StaticGameObject MazeCorner { get; set; }
         public Player Player { get; set; }
+        public int RequiredScore { get; set; }
+        public int Score { get; set; }
         public int Id { get; set; }
 
         public Maze(int id)
         {
             Id = id;
+        }
+
+        public void ScoreChangeEvent(int score)
+        {
+            Score += score;
+        }
+
+        public void RequiredScoreChangeEvent(int score)
+        {
+            RequiredScore += score;
         }
     }
 }

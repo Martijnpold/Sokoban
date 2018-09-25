@@ -9,14 +9,29 @@ namespace Sokoban.Model.Static
 {
     class Floor : StaticGameObject
     {
-        public override bool CanMoveOnTop()
+        public override void AddToMaze(IMaze maze)
         {
-            return true;
+            return;
         }
 
-        public override char GetEmptyIcon()
+        public override char GetIcon()
         {
-            return '·';
+            return ObjectOnTop == null ? '·' : ObjectOnTop.GetIcon();
+        }
+
+        public override void MoveOnTop(DynamicGameObject gameObject)
+        {
+            if (ObjectOnTop == null)
+            {
+                gameObject.ObjectBelow.MoveOff();
+                ObjectOnTop = gameObject;
+                gameObject.ObjectBelow = this;
+            }
+        }
+
+        public override void MoveOff()
+        {
+            ObjectOnTop = null;
         }
     }
 }

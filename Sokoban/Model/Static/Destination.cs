@@ -9,26 +9,37 @@ namespace Sokoban.Model.Static
 {
     class Destination : StaticGameObject
     {
-        public override bool CanMoveOnTop()
+        private IMaze _maze;
+
+        public override void AddToMaze(IMaze maze)
         {
-            return true;
+            _maze = maze;
+            _maze.RequiredScoreChangeEvent(1);
         }
 
-        public override char GetEmptyIcon()
+        public override char GetIcon()
         {
-            return 'x';
+            return ObjectOnTop == null ? 'X' : ObjectOnTop.GetIcon();
         }
 
         public override void MoveOnTop(DynamicGameObject gameObject)
         {
-            gameObject.IsOnDestination = true;
-            base.MoveOnTop(gameObject);
+            if (ObjectOnTop == null)
+            {
+                gameObject.ObjectBelow.MoveOff();
+                ObjectOnTop = gameObject;
+                gameObject.ObjectBelow = this;
+                _maze.ScoreChangeEvent(1);
+            }
         }
 
         public override void MoveOff()
         {
-            ObjectOnTop.IsOnDestination = false;
-            base.MoveOff();
+            if (ObjectOnTop != null)
+            {
+                ObjectOnTop = null;
+                _maze.ScoreChangeEvent(-1);
+            }
         }
     }
 }

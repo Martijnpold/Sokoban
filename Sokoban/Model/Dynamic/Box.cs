@@ -11,22 +11,18 @@ namespace Sokoban.Model.Dynamic
     {
         public override char GetIcon()
         {
-            return (IsOnDestination) ? 'Ø' : 'O';
+            return 'O';
         }
 
         public override void Move(Direction direction)
         {
-            StaticGameObject to = ObjectBelow.Neighbours[direction];
-            if (to.IsFree)
-            {
-                ObjectBelow.MoveOff();
-                to.MoveOnTop(this);
-            }
+            Push(direction);
         }
 
-        public override bool IsSolved()
+        public override void Push(Direction direction)
         {
-            return IsOnDestination;
+            StaticGameObject to = ObjectBelow.Neighbours[direction];
+            to.MoveOnTop(this);
         }
     }
 }

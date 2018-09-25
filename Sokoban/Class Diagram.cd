@@ -1,28 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Sokoban.Program" Collapsed="true">
-    <Position X="0.5" Y="2" Width="1.5" />
+  <Class Name="Sokoban.Program">
+    <Position X="8" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Proces.Controller" Collapsed="true">
-    <Position X="5" Y="2" Width="1.5" />
+  <Class Name="Sokoban.Proces.Controller">
+    <Position X="13.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAABAAAAEABAABIAEAAAAAAAABAAAACIAAAA=</HashCode>
       <FileName>Proces\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="_inputView" />
+      <Field Name="_outputView" />
       <Property Name="Maze" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Sokoban.Proces.Parser" Collapsed="true">
-    <Position X="2.75" Y="1.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+  <Class Name="Sokoban.Proces.Parser">
+    <Position X="9.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAIABAA=</HashCode>
       <FileName>Proces\Parser.cs</FileName>
@@ -31,83 +29,84 @@
       <Property Name="Maze" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Sokoban.Presentation.OutputView" Collapsed="true">
-    <Position X="6" Y="0.5" Width="1.5" />
+  <Class Name="Sokoban.Presentation.OutputView">
+    <Position X="15.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAAAACAAAAAAAAgAAAAAAAAAACAA=</HashCode>
       <FileName>Presentation\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Model.Maze" Collapsed="true">
-    <Position X="4" Y="3.5" Width="1.5" />
+  <Class Name="Sokoban.Model.Maze">
+    <Position X="11.25" Y="5.75" Width="1.5" />
     <AssociationLine Name="Player" Type="Sokoban.Model.Dynamic.Player">
       <MemberNameLabel ManuallyPlaced="true">
         <Position X="-0.693" Y="0.072" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAACAAAgAAAACAgEAAAAAAAAAAAAABAAAAAAAQAAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="MazeCorner" />
       <Property Name="Player" />
     </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Sokoban.Model.Dynamic.Box" Collapsed="true">
-    <Position X="6.75" Y="6.25" Width="1.5" />
+  <Class Name="Sokoban.Model.Dynamic.Box">
+    <Position X="14.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Model\Dynamic\Box.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Model.Dynamic.DynamicGameObject" Collapsed="true">
-    <Position X="7.5" Y="5" Width="2" />
+  <Class Name="Sokoban.Model.Dynamic.DynamicGameObject">
+    <Position X="15.25" Y="7" Width="2" />
     <TypeIdentifier>
-      <HashCode>ABAAAAQAAIAAAAEAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <HashCode>ABAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Model\Dynamic\DynamicGameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Model.Dynamic.Player" Collapsed="true">
-    <Position X="8.75" Y="6.25" Width="1.5" />
+  <Class Name="Sokoban.Model.Dynamic.Player">
+    <Position X="16.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Model\Dynamic\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Model.Static.Destination" Collapsed="true">
-    <Position X="0.5" Y="6.25" Width="1.5" />
+  <Class Name="Sokoban.Model.Static.Destination">
+    <Position X="6.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAABAAAAAAAgAAAAAAAAAIAAA=</HashCode>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAgBAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Model.Static.Floor" Collapsed="true">
-    <Position X="2.75" Y="6.25" Width="1.5" />
+  <Class Name="Sokoban.Model.Static.Floor">
+    <Position X="8.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\Floor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Model.Static.StaticGameObject" Collapsed="true">
-    <Position X="2.75" Y="5" Width="1.5" />
+  <Class Name="Sokoban.Model.Static.StaticGameObject">
+    <Position X="8.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CBAAAAAAAAAAgAIAAAAAgBAAAAAAAgAAAAAAAAAIAAA=</HashCode>
+      <HashCode>ABAAAAAIAAAAAAIAAAAAgBAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\StaticGameObject.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="ObjectOnTop" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Sokoban.Model.Static.Wall" Collapsed="true">
-    <Position X="5" Y="6.25" Width="1.5" />
+  <Class Name="Sokoban.Model.Static.Wall">
+    <Position X="10.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Sokoban.Presentation.InputView" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+  <Class Name="Sokoban.Presentation.InputView">
+    <Position X="12.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Presentation\InputView.cs</FileName>

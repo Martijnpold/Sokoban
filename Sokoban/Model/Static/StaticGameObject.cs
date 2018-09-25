@@ -10,34 +10,19 @@ namespace Sokoban.Model.Static
     abstract class StaticGameObject
     {
         public Dictionary<Direction, StaticGameObject> Neighbours { get; }
-        public DynamicGameObject ObjectOnTop { get; private set; }
-        public bool IsFree { get { return (ObjectOnTop == null && CanMoveOnTop()); } }
+        public DynamicGameObject ObjectOnTop { get; set; }
 
         public StaticGameObject()
         {
             Neighbours = new Dictionary<Direction, StaticGameObject>();
         }
 
-        public virtual void MoveOff()
-        {
-            if (!IsFree) ObjectOnTop.ObjectBelow = null;
-            ObjectOnTop = null;
-        }
+        public abstract void MoveOnTop(DynamicGameObject gameObject);
 
-        public virtual void MoveOnTop(DynamicGameObject gameObject)
-        {
-            ObjectOnTop = gameObject;
-            gameObject.ObjectBelow = this;
-        }
+        public abstract void MoveOff();
 
-        public abstract bool CanMoveOnTop();
+        public abstract char GetIcon();
 
-        public char GetIcon()
-        {
-            if (!CanMoveOnTop()) return GetEmptyIcon();
-            return (IsFree) ? GetEmptyIcon() : ObjectOnTop.GetIcon();
-        }
-
-        public abstract char GetEmptyIcon();
+        public abstract void AddToMaze(IMaze maze);
     }
 }

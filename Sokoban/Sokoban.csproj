@@ -63,6 +63,7 @@
     <Compile Include="Model\Dynamic\DynamicGameObject.cs" />
     <Compile Include="Model\Dynamic\Player.cs" />
     <Compile Include="Model\Maze.cs" />
+    <Compile Include="Model\IMaze.cs" />
     <Compile Include="Model\Static\Destination.cs" />
     <Compile Include="Model\Static\Floor.cs" />
     <Compile Include="Model\Static\StaticGameObject.cs" />

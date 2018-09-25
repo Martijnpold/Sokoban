@@ -87,24 +87,7 @@ namespace Sokoban.Proces
         /// <returns>Boolean whether or not the level is finished</returns>
         public bool IsFinished()
         {
-            StaticGameObject x, y;
-            bool xDone, yDone;
-            y = Maze.MazeCorner;
-            yDone = false;
-            while (!yDone)
-            {
-                x = y;
-                xDone = false;
-                while (!xDone)
-                {
-                    if (x.ObjectOnTop != null && !x.ObjectOnTop.IsSolved()) return false;
-                    xDone = !x.Neighbours.ContainsKey(Direction.Right);
-                    if (!xDone) x = x.Neighbours[Direction.Right];
-                }
-                yDone = !y.Neighbours.ContainsKey(Direction.Down);
-                if (!yDone) y = y.Neighbours[Direction.Down];
-            }
-            return true;
+            return Maze.RequiredScore <= Maze.Score;
         }
 
         /// <summary>

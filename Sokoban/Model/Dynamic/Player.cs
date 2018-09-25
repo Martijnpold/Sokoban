@@ -17,13 +17,13 @@ namespace Sokoban.Model.Dynamic
         public override void Move(Direction direction)
         {
             StaticGameObject to = ObjectBelow.Neighbours[direction];
-            if (!to.CanMoveOnTop()) return;
-            if (!to.IsFree) to.ObjectOnTop.Move(direction);
-            if (to.IsFree)
-            {
-                ObjectBelow.MoveOff();
-                to.MoveOnTop(this);
-            }
+            if (to.ObjectOnTop != null) to.ObjectOnTop.Push(direction);
+            to.MoveOnTop(this);
+        }
+
+        public override void Push(Direction direction)
+        {
+            return;
         }
     }
 }
