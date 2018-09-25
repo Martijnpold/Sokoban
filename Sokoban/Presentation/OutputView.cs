@@ -44,13 +44,15 @@ namespace Sokoban.Presentation
             Console.WriteLine("║    spatie : outerspace         ║                     ║");
             Console.WriteLine("║         █ : muur               ║  duw met de truck   ║");
             Console.WriteLine("║         · : vloer              ║  de krat(ten)       ║");
+            Console.WriteLine("║         ~ : beschadigde vloer  ║  de krat(ten)       ║");
             Console.WriteLine("║         O : krat               ║  naar de bestemming ║");
             Console.WriteLine("║         Ø : krat op bestemming ║                     ║");
             Console.WriteLine("║         x : bestemming         ║                     ║");
             Console.WriteLine("║         @ : speler             ║                     ║");
+            Console.WriteLine("║         $ : tegenstrever       ║                     ║");
             Console.WriteLine("╚════════════════════════════════╩═════════════════════╝");
             Console.WriteLine("");
-            Console.WriteLine("> Kies een doolhof (1 - 4) s = stop");
+            Console.WriteLine("> Kies een doolhof (1 - 6) s = stop");
         }
 
         public void PrintLevelView(Maze maze)

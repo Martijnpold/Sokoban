@@ -8,8 +8,10 @@ using Sokoban.Model.Interface;
 
 namespace Sokoban.Model.Static
 {
-    class Wall : StaticGameObject
+    class DamagedFloor : StaticGameObject
     {
+        private int _health = 3;
+
         public override void AddToMaze(IMaze maze)
         {
             return;
@@ -17,17 +19,30 @@ namespace Sokoban.Model.Static
 
         public override char GetIcon()
         {
-            return '█';
+            if (ObjectOnTop != null) return ObjectOnTop.GetIcon();
+            return _health > 0 ? '~' : ' ';
         }
 
         public override void MoveOnTop(DynamicGameObject gameObject)
         {
-            return;
+            if (ObjectOnTop == null)
+            {
+                gameObject.ObjectBelow.MoveOff();
+                ObjectOnTop = gameObject;
+                gameObject.ObjectBelow = this;
+
+                if (_health <= 0)
+                {
+                    gameObject.Destroy();
+                }
+
+                _health--;
+            }
         }
 
         public override void MoveOff()
         {
-            return;
+            ObjectOnTop = null;
         }
 
         public override void UpdateScore()

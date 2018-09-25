@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Sokoban.Model.Dynamic;
+using Sokoban.Model.Interface;
 
 namespace Sokoban.Model.Static
 {
@@ -32,6 +33,11 @@ namespace Sokoban.Model.Static
         public override void MoveOff()
         {
             ObjectOnTop = null;
+        }
+
+        public override void UpdateScore()
+        {
+            return;
         }
     }
 }

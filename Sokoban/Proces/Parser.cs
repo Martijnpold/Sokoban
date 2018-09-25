@@ -56,8 +56,17 @@ namespace Sokoban.Proces
 
                         //Floor
                         case '.':
-                        case ' ':
                         mazeLayout[charNr, lineNr] = new Floor();
+                        break;
+
+                        //Void
+                        case ' ':
+                        mazeLayout[charNr, lineNr] = new VoidFloor();
+                        break;
+
+                        //DamagedFloor
+                        case '~':
+                        mazeLayout[charNr, lineNr] = new DamagedFloor();
                         break;
 
                         //Destination
@@ -79,6 +88,15 @@ namespace Sokoban.Proces
                         _maze.Player = new Player();
                         _maze.Player.ObjectBelow = mazeLayout[charNr, lineNr];
                         mazeLayout[charNr, lineNr].ObjectOnTop = _maze.Player;
+                        break;
+
+                        //Opposer
+                        case '$':
+                        mazeLayout[charNr, lineNr] = new Floor();
+                        Opposer opposer = new Opposer();
+                        opposer.ObjectBelow = mazeLayout[charNr, lineNr];
+                        mazeLayout[charNr, lineNr].ObjectOnTop = opposer;
+                        _maze.Tickables.Add(opposer);
                         break;
 
                         default:

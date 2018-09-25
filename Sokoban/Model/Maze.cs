@@ -1,4 +1,5 @@
 ﻿using Sokoban.Model.Dynamic;
+using Sokoban.Model.Interface;
 using Sokoban.Model.Static;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,14 @@ namespace Sokoban.Model
     {
         public StaticGameObject MazeCorner { get; set; }
         public Player Player { get; set; }
+        public List<ITickable> Tickables { get; }
         public int RequiredScore { get; set; }
         public int Score { get; set; }
         public int Id { get; set; }
 
         public Maze(int id)
         {
+            Tickables = new List<ITickable>();
             Id = id;
         }
 
@@ -29,6 +32,11 @@ namespace Sokoban.Model
         public void RequiredScoreChangeEvent(int score)
         {
             RequiredScore += score;
+        }
+
+        public void TickTickables()
+        {
+            foreach (ITickable tickable in Tickables) tickable.Tick();
         }
     }
 }

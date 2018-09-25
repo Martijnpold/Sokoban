@@ -1,4 +1,5 @@
 ﻿using Sokoban.Model.Dynamic;
+using Sokoban.Model.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ namespace Sokoban.Model.Static
     class Destination : StaticGameObject
     {
         private IMaze _maze;
+        private bool _hasScore;
 
         public override void AddToMaze(IMaze maze)
         {
@@ -19,6 +21,7 @@ namespace Sokoban.Model.Static
 
         public override char GetIcon()
         {
+            if (_hasScore) return 'Ø';
             return ObjectOnTop == null ? 'X' : ObjectOnTop.GetIcon();
         }
 
@@ -29,7 +32,6 @@ namespace Sokoban.Model.Static
                 gameObject.ObjectBelow.MoveOff();
                 ObjectOnTop = gameObject;
                 gameObject.ObjectBelow = this;
-                _maze.ScoreChangeEvent(1);
             }
         }
 
@@ -38,8 +40,15 @@ namespace Sokoban.Model.Static
             if (ObjectOnTop != null)
             {
                 ObjectOnTop = null;
-                _maze.ScoreChangeEvent(-1);
+                if(_hasScore) _maze.ScoreChangeEvent(-1);
+                _hasScore = false;
             }
+        }
+
+        public override void UpdateScore()
+        {
+            _maze.ScoreChangeEvent(1);
+            _hasScore = true;
         }
     }
 }

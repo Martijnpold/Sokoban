@@ -44,7 +44,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAgAAAACAgEAAAAAAAAAAAAABAAAAAAAQAAAAA=</HashCode>
+      <HashCode>AAACQAAgAAAACAgEAAAAAAAAAAAAABAAAAAAAQgAAAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -54,44 +54,44 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="Sokoban.Model.Dynamic.Box">
-    <Position X="14.75" Y="9.5" Width="1.5" />
+    <Position X="14.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Model\Dynamic\Box.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Model.Dynamic.DynamicGameObject">
     <Position X="15.25" Y="7" Width="2" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAIAAAAEAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>ABAAAAAAAIAAAAEAAAAAAAAAAABAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Model\Dynamic\DynamicGameObject.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Model.Dynamic.Player">
-    <Position X="16.75" Y="9.5" Width="1.5" />
+    <Position X="16.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAAAAAACAA=</HashCode>
       <FileName>Model\Dynamic\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Model.Static.Destination">
     <Position X="6.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAIAAAAAAAAAAAAgBAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAgBAgAAAAAABAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\Destination.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Model.Static.Floor">
     <Position X="8.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAIAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\Floor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Sokoban.Model.Static.StaticGameObject">
     <Position X="8.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAIAAAAAAIAAAAAgBAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>ABAAAAAIAAAAAAIAAAAAgBAgAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\StaticGameObject.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -101,7 +101,7 @@
   <Class Name="Sokoban.Model.Static.Wall">
     <Position X="10.25" Y="10.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAIAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>Model\Static\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>

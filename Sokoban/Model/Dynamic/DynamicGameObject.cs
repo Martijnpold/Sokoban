@@ -15,6 +15,8 @@ namespace Sokoban.Model.Dynamic
 
         public abstract void Push(Direction direction);
 
+        public abstract void Destroy();
+
         public abstract char GetIcon();
     }
 }

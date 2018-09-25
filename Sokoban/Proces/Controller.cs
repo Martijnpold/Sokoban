@@ -35,6 +35,8 @@ namespace Sokoban.Proces
                 if (input == ConsoleKey.D2) PlayLevel(2);
                 if (input == ConsoleKey.D3) PlayLevel(3);
                 if (input == ConsoleKey.D4) PlayLevel(4);
+                if (input == ConsoleKey.D5) PlayLevel(5);
+                if (input == ConsoleKey.D6) PlayLevel(6);
                 if (input == ConsoleKey.S) QuitGame();
             }
         }
@@ -79,6 +81,7 @@ namespace Sokoban.Proces
         public void DoMove(Direction direction)
         {
             Maze.Player.Move(direction);
+            Maze.TickTickables();
         }
 
         /// <summary>

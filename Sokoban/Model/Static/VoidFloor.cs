@@ -8,7 +8,7 @@ using Sokoban.Model.Interface;
 
 namespace Sokoban.Model.Static
 {
-    class Wall : StaticGameObject
+    class VoidFloor : StaticGameObject
     {
         public override void AddToMaze(IMaze maze)
         {
@@ -17,12 +17,12 @@ namespace Sokoban.Model.Static
 
         public override char GetIcon()
         {
-            return '█';
+            return ' ';
         }
 
         public override void MoveOnTop(DynamicGameObject gameObject)
         {
-            return;
+            gameObject.Destroy();
         }
 
         public override void MoveOff()

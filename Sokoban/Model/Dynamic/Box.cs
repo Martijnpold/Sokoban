@@ -23,6 +23,13 @@ namespace Sokoban.Model.Dynamic
         {
             StaticGameObject to = ObjectBelow.Neighbours[direction];
             to.MoveOnTop(this);
+            to.UpdateScore();
+        }
+
+        public override void Destroy()
+        {
+            ObjectBelow.MoveOff();
+            ObjectBelow = null;
         }
     }
 }

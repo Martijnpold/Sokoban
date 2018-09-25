@@ -25,5 +25,10 @@ namespace Sokoban.Model.Dynamic
         {
             return;
         }
+
+        public override void Destroy()
+        {
+            return;
+        }
     }
 }

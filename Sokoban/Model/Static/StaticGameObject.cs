@@ -1,4 +1,5 @@
 ﻿using Sokoban.Model.Dynamic;
+using Sokoban.Model.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,8 @@ namespace Sokoban.Model.Static
         {
             Neighbours = new Dictionary<Direction, StaticGameObject>();
         }
+
+        public abstract void UpdateScore();
 
         public abstract void MoveOnTop(DynamicGameObject gameObject);
 

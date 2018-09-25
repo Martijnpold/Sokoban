@@ -61,12 +61,16 @@
     <Compile Include="Model\Direction.cs" />
     <Compile Include="Model\Dynamic\Box.cs" />
     <Compile Include="Model\Dynamic\DynamicGameObject.cs" />
+    <Compile Include="Model\Interface\ITickable.cs" />
+    <Compile Include="Model\Dynamic\Opposer.cs" />
     <Compile Include="Model\Dynamic\Player.cs" />
     <Compile Include="Model\Maze.cs" />
-    <Compile Include="Model\IMaze.cs" />
+    <Compile Include="Model\Interface\IMaze.cs" />
+    <Compile Include="Model\Static\DamagedFloor.cs" />
     <Compile Include="Model\Static\Destination.cs" />
     <Compile Include="Model\Static\Floor.cs" />
     <Compile Include="Model\Static\StaticGameObject.cs" />
+    <Compile Include="Model\Static\VoidFloor.cs" />
     <Compile Include="Model\Static\Wall.cs" />
     <Compile Include="Presentation\InputView.cs" />
     <Compile Include="Presentation\OutputView.cs" />
@@ -102,6 +106,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Doolhof\doolhof4.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Doolhof\doolhof5.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Doolhof\doolhof6.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
