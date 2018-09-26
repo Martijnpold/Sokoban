@@ -1,2 +1,139 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sokoban.Program">
+    <Position X="8" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Proces.Controller">
+    <Position X="13.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAABAAAAEABAABIAEAAAAAAAABAAAACIAAAA=</HashCode>
+      <FileName>Proces\Controller.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_inputView" />
+      <Field Name="_outputView" />
+      <Property Name="Maze" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Proces.Parser">
+    <Position X="9.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAIABAA=</HashCode>
+      <FileName>Proces\Parser.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Maze" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Presentation.OutputView">
+    <Position X="15.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAACAAAAAAAAgAAAAAAAAAACAA=</HashCode>
+      <FileName>Presentation\OutputView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Maze">
+    <Position X="11.25" Y="5.75" Width="1.5" />
+    <AssociationLine Name="Player" Type="Sokoban.Model.Dynamic.Player">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.693" Y="0.072" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAACQAAgAAAACAgEAAAAAAAAAAAAABAAAAAAAQgAAAA=</HashCode>
+      <FileName>Model\Maze.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="MazeCorner" />
+      <Property Name="Player" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sokoban.Model.Dynamic.Box">
+    <Position X="14.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Model\Dynamic\Box.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Dynamic.DynamicGameObject">
+    <Position X="15.25" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAIAAAAEAAAAAAAAAAABAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Model\Dynamic\DynamicGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Dynamic.Player">
+    <Position X="16.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Model\Dynamic\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Static.Destination">
+    <Position X="6.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAgBAgAAAAAABAAAAAAAAIAAA=</HashCode>
+      <FileName>Model\Static\Destination.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Static.Floor">
+    <Position X="8.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Model\Static\Floor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Static.StaticGameObject">
+    <Position X="8.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAIAAAAAAIAAAAAgBAgAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Model\Static\StaticGameObject.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ObjectOnTop" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Sokoban.Model.Static.Wall">
+    <Position X="10.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Model\Static\Wall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Presentation.InputView">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\InputView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Dynamic.Opposer">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAAACAAASAA=</HashCode>
+      <FileName>Model\Dynamic\Opposer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Sokoban.Model.Static.DamagedFloor">
+    <Position X="4.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAIAAEAAAAAAAAAABAgAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Model\Static\DamagedFloor.cs</FileName>
+      <NewMemberFileName>Model\Static\VoidFloor.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sokoban.Model.Static.VoidFloor">
+    <Position X="2.25" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAIAAAAAAAAAAAAABAgAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Model\Static\VoidFloor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
